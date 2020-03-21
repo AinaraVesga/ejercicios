@@ -98,8 +98,5 @@ Module Program
             Next
             Console.WriteLine(ciu)
         Next
-
-
-
     End Sub
 End Module
