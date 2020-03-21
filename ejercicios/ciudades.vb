@@ -1,7 +1,4 @@
-Imports System
-
-Module Program
-
+﻿Module ciudades
     Private i As Integer
     Private j As Integer
 
