@@ -57,9 +57,9 @@ Module Program
         lista.Add(ciudades(0))
         multiLista.Add(lista)
 
-        Console.WriteLine(multiLista(0)(0))
+        ' Console.WriteLine(multiLista(0)(0))
 
-        For i As Integer = 1 To ciudades.Length
+        For i As Integer = 1 To ciudades.Length - 1
             Dim j = 0
             Dim salir = False
             While j < multiLista.Count And salir = False
@@ -88,9 +88,18 @@ Module Program
 
         Dim ciudades = New String() {"tokyo", "london", "rome", "donlon", "kyoto", "paris"}
 
-        Dim res = separar(ciudades)
+        Dim res As List(Of List(Of String))
+        res = separar(ciudades)
 
-        For i As Integer = 0 To res.
+        For i As Integer = 0 To res.Count - 1
+            Dim ciu = ""
+            For j As Integer = 0 To res(i).Count - 1
+                ciu = ciu + res(i)(j) + " "
+            Next
+            Console.WriteLine(ciu)
+        Next
+
+
 
     End Sub
 End Module
