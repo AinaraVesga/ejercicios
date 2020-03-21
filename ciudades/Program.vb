@@ -13,9 +13,10 @@ Module Program
             j = 1
             Dim iguales As Boolean
             Dim esta As Boolean
-            
 
-            While i < palabra1.Length + 1 And iguales = False
+            iguales = True
+
+            While i < palabra1.Length + 1 And iguales = True
                 Dim letra1 = GetChar(palabra1, i)
                 esta = False
                 j = 1
@@ -32,17 +33,16 @@ Module Program
                 If esta = False Then
                     iguales = False
                 End If
-                If palabra2 Like "" Then
-                    iguales = True
-                End If
+
                 i += 1
             End While
 
-            If iguales = False Then
-                Return False
-            Else
+            If palabra2 Like "" Then
                 Return True
+            Else
+                Return False
             End If
+
         End If
     End Function
 
